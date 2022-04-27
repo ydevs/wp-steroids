@@ -1,5 +1,5 @@
 {
-  "name": "metabolism/wp-steroids",
+  "name": "ydevs/wp-steroids",
   "type": "wordpress-plugin",
   "version": "1.0.0",
   "homepage": "http://www.metabolism.fr",
@@ -10,5 +10,8 @@
     "branch-alias": {
       "dev-1.0.x": "1.0.x-dev"
     }
+  },
+  "replace": {
+    "metabolism/wp-steroids": "*"
   }
 }
