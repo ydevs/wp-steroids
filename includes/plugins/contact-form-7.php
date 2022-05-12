@@ -22,7 +22,8 @@ class WPS_Contact_Form_7 {
      */
     public function __construct()
     {
-        add_filter( 'wpcf7_load_js', '__return_false' );
-        add_filter( 'wpcf7_load_css', '__return_false' );
+       add_filter( 'wpcf7_load_js', '__return_true' );
+       add_filter( 'wpcf7_load_css', '__return_true' );
+       add_action( 'enqueue_scripts', [$this, 'enqueue_scripts'] );
     }
 }
