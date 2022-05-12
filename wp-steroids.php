@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Wordpress on Steroids
  * Description: Configure Wordpress using yml and add various plugins
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Metabolism
  * Author URI: http://www.metabolism.fr
  */
