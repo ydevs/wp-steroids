@@ -95,37 +95,38 @@ class WPS_Url {
 
 		$this->redirectAdmin();
 
-		add_action('init', function()
-		{
-			if( apply_filters('wp_make_url_relative', true) ){
+		// TODO: #YDEVS - This breaks Yoast SEO. Disabled until we figure out why.
+		// add_action('init', function()
+		// {
+		// 	if( apply_filters('wp_make_url_relative', true) ){
 
-                $filters = array(
-                    'post_link',
-                    'post_type_link',
-                    'page_link',
-                    'get_shortlink',
-                    'post_type_archive_link',
-                    'get_pagenum_link',
-                    'author_link',
-                    'get_comments_pagenum_link',
-                    'term_link',
-                    'search_link',
-                    'day_link',
-                    'month_link',
-                    'year_link'
-                );
+        //         $filters = array(
+        //             'post_link',
+        //             'post_type_link',
+        //             'page_link',
+        //             'get_shortlink',
+        //             'post_type_archive_link',
+        //             'get_pagenum_link',
+        //             'author_link',
+        //             'get_comments_pagenum_link',
+        //             'term_link',
+        //             'search_link',
+        //             'day_link',
+        //             'month_link',
+        //             'year_link'
+        //         );
 
-                foreach ( $filters as $filter )
-                    add_filter( $filter, [$this, 'makePostRelative'] );
+        //         foreach ( $filters as $filter )
+        //             add_filter( $filter, [$this, 'makePostRelative'] );
 
-                $filters = array(
-                    'attachment_link',
-                    'wp_get_attachment_url'
-                );
+        //         $filters = array(
+        //             'attachment_link',
+        //             'wp_get_attachment_url'
+        //         );
 
-                foreach ( $filters as $filter )
-                    add_filter( $filter, [$this, 'makeAttachmentRelative'] );
-            }
-        });
+        //         foreach ( $filters as $filter )
+        //             add_filter( $filter, [$this, 'makeAttachmentRelative'] );
+        //     }
+        // });
     }
 }
